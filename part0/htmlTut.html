@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Set the charset to utf-8 to handle any textual content placed in page -->
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Slabo+27px&display=swap" rel="stylesheet">
+	<title>HTML Tutorial from Mozilla</title>
+</head>
+<body>
+
+	<h1>HTML Basics: Getting started with the Web</h1>
+	<img src="https://cdn0.iconfinder.com/data/icons/mozilla-icons/256/firefox_png.png" alt="The Firefox logo: a fox with a flaming tail surrounding the Earth.">
+
+	<p>At Mozilla, they're a global community of</p>
+	<ul>
+		<li>technologists</li>
+		<li>builders</li>
+		<li>thinkers</li>
+		<li>coders</li>
+	</ul>
+
+	<p>working together to keep the internet alive and accessible, so people worldwide can be informed contributors and creators of the Web. They believe this act of human collaboration across an open platform is essential to individual growth and our collective future.</p>
+
+	<!-- href == Hyptertext REFerence -->
+	<p>Read the <a href="https://www.mozilla.org/en-US/about/manifesto/" target="blank">Mozilla Manifesto</a> to learn even more about the values and principles that guide the pursuit of their mission.</p>
+
+	<form action="/my-handling-form-page" method="post">
+		<div>
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="user_name">
+		</div>
+		<div>
+			<label for="mail">E-mail:</label>
+			<input type="email" id="mail" name="user_mail">
+		</div>
+		<div>
+			<label for="msg">Message:</label>
+			<textarea id="msg" name="user_message"></textarea>
+		</div>
+		<div class="button">
+			<button type="submit">Send your message</button>
+		</div>
+	</form>
+
+</body>
+</html>

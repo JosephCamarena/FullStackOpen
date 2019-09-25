@@ -1,0 +1,17 @@
+note over browser:
+browser sends note to the server
+end note
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+
+note over server:
+server does not send a redirect
+request to browser
+end note
+
+server->browser: HTTP Status Code 201
+
+note over browser:
+note gets added to the page
+without refreshing
+end note

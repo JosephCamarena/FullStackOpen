@@ -1,0 +1,38 @@
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note
+server->browser: HTTP Status Code 302
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
+
+note over browser:
+browser reloads the Notes page, which causes 3 more HTTP requests
+end note
+
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+server-->browser: main.css
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js
+server-->browser: main.js
+
+note over browser:
+browser starts executing js-code
+that requests JSON data from server 
+end note
+
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+server-->browser: [{ content: "HTML is easy", date: "2019-05-23" }, ...]
+
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note
+
+
+=========
+when button on form clicked -> browser sends user input to server
+5 HTTP requests total:
+  submit event: HTTP POST request to server adress new_note
+  Server responds with HTTP Status code 302 (a URL redirect)
+  Server asks browser to do a new HTTP GET request to the address defined in the header's Location - the address 'notes'
+Browser reloads Notes page; this causes 3 more HTTP requests:
+  fetching the style sheet (main.css),
+  JavaScript code (main.js),
+  and the raw data of the notes (data.json).
+"The network tab shows the data submitted with the form"
